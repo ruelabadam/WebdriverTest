@@ -15,20 +15,19 @@ import java.net.URL;
 
 public class NewTest {
 	
-	String user = System.getProperty("sUSERNAME") ;
-	String key = System.getProperty("sACCESS_KEY") ;
-	
+	public final String user = System.getProperty("sUSERNAME") ;
+	public final String key = System.getProperty("sACCESS_KEY") ;
 	public final String URL = "https://" + user + ":" + key + "@ondemand.saucelabs.com:443/wd/hub";
 	
 	private WebDriver driver;
 
 	@BeforeTest
 	public void beforeTest() throws MalformedURLException {
-		  DesiredCapabilities caps = DesiredCapabilities.chrome();
-		  caps.setCapability("platform", "Linux");
-		  caps.setCapability("version", "47.0");
+		 
+		DesiredCapabilities caps = DesiredCapabilities.firefox();
+//		  caps.setCapability("platform", "Linux");
+//		  caps.setCapability("version", "47.0");
 		  driver = new RemoteWebDriver(new URL(URL), caps);
-//	 driver = new ChromeDriver();
 	}
 		
 	@AfterTest

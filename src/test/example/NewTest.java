@@ -23,9 +23,9 @@ public class NewTest {
 	
 	@Test
 	public void testEasy() {
-		driver.get("http://demo.guru99.com/selenium/guru99home/");  
+		driver.get("http://www.ruelsrunning.com");  
 		String title = driver.getTitle();				 
-		Assert.assertTrue(title.contains("Demo Guru99 Page"));
+		Assert.assertTrue(title.contains("Ru El's Running - In here...everyone's a runner!"));
 	}
 	
 

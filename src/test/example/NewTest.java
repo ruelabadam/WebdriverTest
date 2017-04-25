@@ -24,9 +24,9 @@ public class NewTest {
 
 	@BeforeTest
 	public void beforeTest() throws MalformedURLException {
-		  DesiredCapabilities caps = DesiredCapabilities.safari();
-		  caps.setCapability("platform", "OS X 10.9");
-		  caps.setCapability("version", "7.0");
+		  DesiredCapabilities caps = DesiredCapabilities.chrome();
+		  caps.setCapability("platform", "Linux");
+		  caps.setCapability("version", "47.0");
 		  driver = new RemoteWebDriver(new URL(URL), caps);
 //	 driver = new ChromeDriver();
 	}

@@ -17,7 +17,7 @@ public class NewTest {
 	
 //	public static final String USERNAME = sUSERNAME;
 //	public static final String ACCESS_KEY = sACCESS_KEY;
-	public static final String URL = "https://" + sUSERNAME + ":" + sACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";
+	public static final String URL = "https://" + $sUSERNAME + ":" + $sACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";
 	
 	private WebDriver driver;
 

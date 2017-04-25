@@ -15,9 +15,6 @@ import java.net.URL;
 
 public class NewTest {
 	
-//	public static final String USERNAME = sUSERNAME;
-//	public static final String ACCESS_KEY = sACCESS_KEY;
-	
 	String user = System.getProperty("sUSERNAME") ;
 	String key = System.getProperty("sACCESS_KEY") ;
 	
@@ -27,7 +24,9 @@ public class NewTest {
 
 	@BeforeTest
 	public void beforeTest() throws MalformedURLException {
-		  DesiredCapabilities caps = DesiredCapabilities.chrome();
+		  DesiredCapabilities caps = DesiredCapabilities.safari();
+		  caps.setCapability("platform", "OS X 10.9");
+		  caps.setCapability("version", "7.0");
 		  driver = new RemoteWebDriver(new URL(URL), caps);
 //	 driver = new ChromeDriver();
 	}

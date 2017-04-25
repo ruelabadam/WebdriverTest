@@ -22,9 +22,9 @@ public class NewTest {
 	private WebDriver driver;
 
 	@BeforeTest
-	public void beforeTest() throws MalformedURLException {
+	public void beforeTest() throws Throwable {
 		 
-		DesiredCapabilities caps = DesiredCapabilities.firefox();
+		DesiredCapabilities caps = DesiredCapabilities.chrome();
 //		  caps.setCapability("platform", "Linux");
 //		  caps.setCapability("version", "47.0");
 		  driver = new RemoteWebDriver(new URL(URL), caps);

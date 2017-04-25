@@ -23,7 +23,7 @@ public class NewTest {
 	
 	@Test
 	public void testEasy() {
-		driver.get("http://www.ruelsrunning.com");  
+		driver.get("http://www.Ruelsrunning.com");  
 		String title = driver.getTitle();				 
 		Assert.assertTrue(title.contains("Ru El's Running - In here...everyone's a runner!"));
 	}

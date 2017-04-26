@@ -36,18 +36,21 @@ public class NewTest {
 //  		  caps.setCapability("platform", "Linux");
 //  		  caps.setCapability("version", "47.0");
   		 driver = new RemoteWebDriver(new URL(scURL), caps);
+  		 
+  		 System.out.println("connection should be done.");
 	}
 		
-	@AfterMethod
-	public void afterTest() {
-			driver.quit();			
-	}	
+//	@AfterMethod
+//	public void afterTest() {
+//			driver.quit();			
+//	}	
 	
 	@Test
 	public void testEasy() {
 		driver.get("http://www.Ruelsrunning.com");  
 		String title = driver.getTitle();				 
 		Assert.assertTrue(title.contains("Ru El's Running - In here...everyone's a runner!"));
+		System.out.println("test should be done.");
 	}
 	
 

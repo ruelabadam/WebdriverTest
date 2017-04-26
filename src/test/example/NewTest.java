@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;		
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -17,12 +18,12 @@ public class NewTest {
 //	public final String user = System.getProperty("sUSERNAME") ;
 //	public final String key = System.getProperty("sACCESS_KEY") ;
 	
-	public final String URL = "https://" + System.getProperty("sUSERNAME") + ":" + System.getProperty("sACCESS_KEY") + "@ondemand.saucelabs.com:443/wd/hub";
+	public final String scURL = "https://" + System.getProperty("sUSERNAME") + ":" + System.getProperty("sACCESS_KEY") + "@ondemand.saucelabs.com:443/wd/hub";
 	
 	public RemoteWebDriver driver;
 
-	@BeforeTest
-	public void beforeTest() throws Throwable {
+	
+	public void setup() throws Throwable {
 		
 		//codeship Chrome
 //		System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
@@ -30,13 +31,14 @@ public class NewTest {
 		// Initialize browser
 //		driver=new ChromeDriver();
 		
-		DesiredCapabilities caps = DesiredCapabilities.firefox();
-  		  caps.setCapability("platform", "Linux");
+		@SuppressWarnings("static-access")
+		DesiredCapabilities caps = new DesiredCapabilities().chrome();
+//  		  caps.setCapability("platform", "Linux");
 //  		  caps.setCapability("version", "47.0");
-  		 driver = new RemoteWebDriver(new URL(URL), caps);
+  		 driver = new RemoteWebDriver(new URL(scURL), caps);
 	}
 		
-	@AfterTest
+	@AfterMethod
 	public void afterTest() {
 			driver.quit();			
 	}	

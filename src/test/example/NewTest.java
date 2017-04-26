@@ -46,10 +46,13 @@ public class NewTest {
 //	}	
 	
 	@Test
-	public void testEasy() {
+	public void testEasy() throws InterruptedException {
 		driver.get("http://www.Ruelsrunning.com");  
-		String title = driver.getTitle();				 
+		Thread.sleep(5000);
+		String title = driver.getTitle();	
+		Thread.sleep(5000);
 		Assert.assertTrue(title.contains("Ru El's Running - In here...everyone's a runner!"));
+		Thread.sleep(5000);
 		System.out.println("test should be done.");
 	}
 	

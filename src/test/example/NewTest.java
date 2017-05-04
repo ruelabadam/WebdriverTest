@@ -1,6 +1,7 @@
 package example;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.testng.*;
 import org.testng.Assert;		
@@ -26,7 +27,7 @@ public class NewTest {
 	public void setup() throws Throwable {
 		
 		//codeship Chrome
-//		System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 		
 		// Initialize browser
 //		driver=new ChromeDriver();
@@ -49,12 +50,5 @@ public class NewTest {
 	public void testEasy() throws InterruptedException {
 		driver.get("http://www.Ruelsrunning.com");  
 		Thread.sleep(5000);
-		String title = driver.getTitle();	
-		Thread.sleep(5000);
-//		Assert.assertTrue(title.contains("Ru El's Running - In here...everyone's a runner!"));
-//		Thread.sleep(5000);
-		System.out.println("test should be done.");
 	}
-	
-
 }

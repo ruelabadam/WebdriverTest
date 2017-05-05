@@ -24,9 +24,15 @@ public class RemoteTest {
 	@BeforeTest
 	public void beforeTest() throws Throwable{
 	new DesiredCapabilities();
-	DesiredCapabilities caps = DesiredCapabilities.chrome();
-	  caps.setCapability("platform", "Linux");
-	  caps.setCapability("version", "47.0");
+	
+//	DesiredCapabilities caps = DesiredCapabilities.chrome();
+//	  caps.setCapability("platform", "Linux");
+//	  caps.setCapability("version", "47.0");
+	
+	DesiredCapabilities caps = DesiredCapabilities.safari();
+	caps.setCapability("platform", "OS X 10.9");
+	caps.setCapability("version", "7.0");
+	
 	driver = new RemoteWebDriver(new URL(scURL), caps);
 	}
 	

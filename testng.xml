@@ -3,6 +3,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
+      <class name="example.RemoteTest"/>
       <class name="example.LocalTest"/>
     </classes>
   </test> <!-- Test -->

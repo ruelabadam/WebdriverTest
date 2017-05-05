@@ -33,8 +33,8 @@ public class NewTest {
 		
 		@SuppressWarnings("static-access")
 		DesiredCapabilities caps = new DesiredCapabilities().chrome();
-//  		  caps.setCapability("platform", "Linux");
-//  		  caps.setCapability("version", "47.0");
+  		  caps.setCapability("platform", "Linux");
+  		  caps.setCapability("version", "47.0");
   		 driver = new RemoteWebDriver(new URL(scURL), caps);
   		 
   		 System.out.println("connection should be done.");

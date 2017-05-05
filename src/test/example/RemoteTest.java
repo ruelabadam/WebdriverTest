@@ -26,7 +26,7 @@ public class RemoteTest {
 	new DesiredCapabilities();
 	DesiredCapabilities caps = DesiredCapabilities.chrome();
 	  caps.setCapability("platform", "Linux");
-	  caps.setCapability("version", "56.0");
+	  caps.setCapability("version", "47.0");
 	driver = new RemoteWebDriver(new URL(scURL), caps);
 	}
 	
